@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Panel.Views.AboutPage"
+             xmlns:vm="clr-namespace:Panel.ViewModels"
+             Title="{Binding Title}">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout x:Name="stackLayoutPanel" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+            <!--<ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <!--<RowDefinition Height="3*"   />
+                    <RowDefinition Height="3*"   />-->
+                </Grid.RowDefinitions>
+
+
+                <Image x:Name="imageHeadingInner" Grid.Row="0" VerticalOptions="Center" />
+                <Image x:Name="imageHeadingOuter" Grid.Row="0" VerticalOptions="Center" />
+                <Image x:Name="imageHeadingPlane" Grid.Row="0" VerticalOptions="Center" />
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <!--<RowDefinition Height="3*"   />
+                    <RowDefinition Height="3*"   />-->
+                </Grid.RowDefinitions>
+                <Image x:Name="imageAttitudeInner" Grid.Row="0" VerticalOptions="Center" />
+                <Image x:Name="imageAttitudeOuter" Grid.Row="0" VerticalOptions="Center" />
+            </Grid>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <!--<RowDefinition Height="3*"   />
+                    <RowDefinition Height="3*"   />-->
+                </Grid.RowDefinitions>
+                <Image x:Name="imageAirspeedInner" Grid.Row="0" VerticalOptions="Center" />
+                <Image x:Name="imageAirspeedNeedle" Grid.Row="0" VerticalOptions="Center" />
+
+            </Grid>
+
+
+            <!--<Image x:Name="imageAttitudeOuter" Grid.Row="1" VerticalOptions="Center" />-->
+
+
+            <!--</Grid>-->
+            <!--</ContentView>-->
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
